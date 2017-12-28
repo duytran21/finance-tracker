@@ -1,0 +1,35 @@
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <%= link_to "Finance Tracker", root_path, class: "navbar-brand" %>
+    
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <% if current_user %>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "My Portfolio", my_portfolio_path  %></li>
+          <li><%= link_to "My Profile", edit_user_registration_path(current_user) %></li>
+        </ul>
+
+        <ul class="nav navbar-right col-md-4">
+          <li class="col-md-8 user-name text-right">
+            <i class="fa fa-user"></i>
+            <%= current_user.full_name.present? ? current_user.full_name : current_user.email %>
+          </li>
+          <li class="col-md-4 logout">
+            <%= link_to "Logout", destroy_user_session_path, class: "btn btn-xs btn-danger", method: :delete %>
+          </li>
+        </ul>
+    <% else %>
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Login", new_user_session_path  %></li>
+        <li><%= link_to "Signup", new_user_registration_path %></li>
+      </ul>
+    <% end %>
+     </div>
+  </div>
+</div>
