@@ -30,4 +30,11 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def show
+		#debugger
+		#@friend = User.find(params[:id])
+		@user = User.find(params[:id])
+		@user_stocks = @user.stocks
+	end
+
 end
