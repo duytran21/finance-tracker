@@ -1,0 +1,48 @@
+<div id="homeslider">
+	<div class="home-slideshow">
+		<a class="slideshow-image" style="background-image: url('Slider/Slider1.jpg')">
+		</a>	
+		<div class="slideshow-text">
+			<h1>Title here</h1>
+			<hr>
+			<p>Verbiage</p>
+			<a href="">CTA Link</a>
+		</div>
+	</div>
+
+	<div class="home-slideshow">
+		<a class="slideshow-image" style="background-image: url('Slider/Slider1.jpg'">
+		</a>	
+		<div class="slideshow-text">
+			<h1>Title here</h1>
+			<hr>
+			<p>Verbiage</p>
+			<a href="">CTA Link</a>
+		</div>
+	</div>
+
+	<div class="home-slideshow">
+		<a class="slideshow-image" style="background-image: url('Slider/Slider1.jpg'">
+		</a>	
+		<div class="slideshow-text">
+			<h1>Title here</h1>
+			<hr>
+			<p>Verbiage</p>
+			<a href="">CTA Link</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="/app/assets/javascripts/slick.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#homeslider').slick({
+			lazyload: 'progressive',
+			arrows: false,
+			dots: true,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 3000
+		});
+	});
+</script>

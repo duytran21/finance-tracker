@@ -1,3 +1,369 @@
+/*=======================Typography==============*/
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('Gotham-Light.eot');
+    src: url('Gotham-Light.eot?#iefix') format('embedded-opentype'),
+        url('Gotham-Light.woff2') format('woff2'),
+        url('Gotham-Light.woff') format('woff'),
+        url('Gotham-Light.ttf') format('truetype'),
+        url('Gotham-Light.svg#Gotham-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('Gotham-Book.eot');
+    src: url('Gotham-Book.eot?#iefix') format('embedded-opentype'),
+        url('Gotham-Book.woff2') format('woff2'),
+        url('Gotham-Book.woff') format('woff'),
+        url('Gotham-Book.ttf') format('truetype'),
+        url('Gotham-Book.svg#Gotham-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('Gotham-Medium.eot');
+    src: url('Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Gotham-Medium.woff2') format('woff2'),
+        url('Gotham-Medium.woff') format('woff'),
+        url('Gotham-Medium.ttf') format('truetype'),
+        url('Gotham-Medium.svg#Gotham-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('Georgia.eot');
+  src: url('Georgia.eot?#iefix') format('embedded-opentype'),
+    url('Georgia.woff2') format('woff2'),
+    url('Georgia.woff') format('woff'),
+    url('Georgia.ttf') format('truetype'),
+    url('Georgia.svg#Georgia') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia-Italic';
+  src: url('Georgia-Italic.eot');
+  src: url('Georgia-Italic.eot?#iefix') format('embedded-opentype'),
+    url('Georgia-Italic.woff2') format('woff2'),
+    url('Georgia-Italic.woff') format('woff'),
+    url('Georgia-Italic.ttf') format('truetype'),
+    url('Georgia-Italic.svg#Georgia-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('Baskerville.eot');
+    src: url('Baskerville.eot?#iefix') format('embedded-opentype'),
+        url('Baskerville.woff2') format('woff2'),
+        url('Baskerville.woff') format('woff'),
+        url('Baskerville.ttf') format('truetype'),
+        url('Baskerville.svg#Baskerville') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Book';
+  src: url('Avenir-Book.eot');
+  src: url('Avenir-Book.eot?#iefix') format('embedded-opentype'),
+    url('Avenir-Book.woff2') format('woff2'),
+    url('Avenir-Book.woff') format('woff'),
+    url('Avenir-Book.ttf') format('truetype'),
+    url('Avenir-Book.svg#Avenir-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Roman';
+  src: url('Avenir-Roman.eot');
+  src: url('Avenir-Roman.eot?#iefix') format('embedded-opentype'),
+    url('Avenir-Roman.woff2') format('woff2'),
+    url('Avenir-Roman.woff') format('woff'),
+    url('Avenir-Roman.ttf') format('truetype'),
+    url('Avenir-Roman.svg#Avenir-Roman') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Medium';
+  src: url('Avenir-Medium.eot');
+  src: url('Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+    url('Avenir-Medium.woff2') format('woff2'),
+    url('Avenir-Medium.woff') format('woff'),
+    url('Avenir-Medium.ttf') format('truetype'),
+    url('Avenir-Medium.svg#Avenir-Medium') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Black';
+  src: url('Avenir-Black.eot');
+  src: url('Avenir-Black.eot?#iefix') format('embedded-opentype'),
+    url('Avenir-Black.woff2') format('woff2'),
+    url('Avenir-Black.woff') format('woff'),
+    url('Avenir-Black.ttf') format('truetype'),
+    url('Avenir-Black.svg#Avenir-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+$font-gotham-book: 'Gotham-Book', sans-serif;
+$font-gotham-light: 'Gotham-Light', sans-serif;
+$font-gotham-medium: 'Gotham-Medium', sans-serif;
+$font-georgia: 'Georgia', sans-serif;
+$font-georgia-italic: 'Georgia-Italic', sans-serif;
+$font-baskerville: 'Baskerville', serif;
+$font-avenir-book: 'Avenir-Book', sans-serif;
+$font-avenir-roman: 'Avenir-Roman', sans-serif;
+$font-avenir-medium: 'Avenir-Medium', sans-serif;
+$font-avenir-black: 'Avenir-Black', sans-serif;
+
+/*================================================*/
+
+/*================ Hero Slider ==================*/
+/*================ Hero Slider ================*/
+$color-slideshow-arrows: #000;
+$color-slideshow-dots: #fff;
+
+/*================ VENDOR ================*/
+/*============================================================================
+  Slick Slider 1.6.0
+
+  - If upgrading Slick's styles, use the following variables/functions
+    instead of the slick defaults (from slick-theme.scss)
+  - This file includes default slick.scss styles (at Slick Slider SCSS)
+    and slick-theme.scss (at Slick Slider Theme). Upgrade each area individually.
+  - Remove `outline: none` from `.slick-dots li button`
+==============================================================================*/
+$slick-font-family: "slick-icons, sans-serif";
+$slick-arrow-color: $color-slideshow-arrows;
+$slick-dot-color: $color-slideshow-dots;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-prev-character: '\2190';
+$slick-next-character: '\2192';
+$slick-dot-character: '\2022';
+$slick-dot-size: 6px;
+$slick-opacity-default: 0.75;
+$slick-opacity-on-hover: 1;
+$slick-opacity-not-active: 0.25;
+
+// Only called once so make sure proper file is grabbed
+@function slick-image-url($url) {
+    @if function-exists(image-url) {
+        @return image-url($url);
+    }
+    @else {
+        @return url($slick-loader-path + $url);
+    }
+}
+
+// Unused intentionally
+@function slick-font-url($url) {
+    @if function-exists(font-url) {
+        @return font-url($url);
+    }
+    @else {
+        @return url($slick-font-path + $url);
+    }
+}
+
+/*================ Slick Slider SCSS ================*/
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  [dir="rtl"] & {
+    float: right;
+  }
+  img {
+    display: block;
+  }
+  &.slick-loading img {
+    display: none;
+  }
+
+  display: none;
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/*================ Slick Slider Theme ================*/
+.slick-list {
+  .slick-loading & {
+    background: #fff slick-image-url("/app/assets/images/ajax-loader.gif") center center no-repeat;
+  }
+}
+
+/* Icons */
+@if $slick-font-family == "slick" {
+  @font-face {
+    font-family: "slick";
+    src: slick-font-url("slick.eot");
+    src: slick-font-url("slick.eot?#iefix") format("embedded-opentype"), slick-font-url("slick.woff") format("woff"), slick-font-url("slick.ttf") format("truetype"), slick-font-url("slick.svg#slick") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+
+
+/* Dots */
+
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    button {
+      border: 0;
+      background: transparent;
+      display: block;
+      height: 20px;
+      width: 20px;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer;
+      &:hover, &:focus {
+        &:before {
+          opacity: $slick-opacity-on-hover;
+        }
+      }
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: $slick-dot-character;
+        width: 20px;
+        height: 20px;
+        font-family: $slick-font-family;
+        font-size: $slick-dot-size;
+        line-height: 20px;
+        text-align: center;
+        /*color: $grayLight;*/
+        color: white;
+        border: 2px solid white;
+        opacity: $slick-opacity-not-active;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+    &.slick-active button:before {
+      /*color: $grayDark;*/
+      color: black;
+      opacity: $slick-opacity-default;
+    }
+  }
+}
+
 .results-block {
 	display: inline-block;
 }
@@ -20,7 +386,24 @@
 		margin-top: 5%;
 	}
 
-	.btn-danger:hover {
+	.btn-success:hover {
 		background-color: darken(#d9534f, 20%) !important;
 	}
 }
+
+.navbar-right-cust {
+	margin: 0;	
+}
+
+.section-footer {
+	background-color: #414042;
+	color: #fff;
+	border-radius: 2px;
+
+	p {
+		margin: 10px;
+		text-align: center;
+	}
+}
+
+/*==================Styling New Site=================*/
