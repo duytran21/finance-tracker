@@ -21,15 +21,12 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #414042;
+  text-decoration: none;
+  background-color: transparent;
 
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
+  &:hover, &:focus {
+    opacity: 0.6;
   }
 }
 

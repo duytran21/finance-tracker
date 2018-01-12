@@ -133,6 +133,85 @@ $font-avenir-black: 'Avenir-Black', sans-serif;
 
 /*================================================*/
 
+/*=======================Global Style============*/
+body {
+  font-family: $font-georgia;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #414042;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $font-georgia;
+  margin:0;
+  font-weight: 400;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+}
+
+p, ol, ul, td, input, textarea, button, select {
+  font-family: $font-gotham-book;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 15px;
+}
+
+
+hr {
+  margin: 20px auto;
+  border: 0;
+  border-bottom: 1px solid #414042;
+  width: 100px;
+}
+
+.nav-arrow{
+  position: relative;
+}
+.nav-arrow::before {
+  border-style: solid;
+  border-width: 1.5px 0 0 1.5px;
+  content: '';
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  @media only screen and (min-width: 1024px){
+    height: 11px;
+    width: 11px;  
+  }
+  
+}
+
+.nav-arrow.d-left::before {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.nav-arrow.d-right::before {
+  transform: translate(-50%,-50%) rotate(135deg);
+}
+
+.nav-arrow.d-up::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.nav-arrow.d-down::before {
+  transform: translate(-50%,-50%) rotate(-135deg);
+}
+
+
+
+
+
+/*=================End Global Style===============*/
+
 /*================ Hero Slider ==================*/
 /*================ Hero Slider ================*/
 $color-slideshow-arrows: #000;
@@ -281,7 +360,7 @@ $slick-opacity-not-active: 0.25;
 /*================ Slick Slider Theme ================*/
 .slick-list {
   .slick-loading & {
-    background: #fff slick-image-url("/app/assets/images/ajax-loader.gif") center center no-repeat;
+    background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
   }
 }
 
@@ -407,3 +486,41 @@ $slick-opacity-not-active: 0.25;
 }
 
 /*==================Styling New Site=================*/
+#homeslider {
+  max-width: 1610px;
+  margin-top: 55px;
+  padding: 0 50px;
+}
+
+.home-slideshow {
+  position: relative;
+  font-family: $font-gotham-book;
+
+  .slideshow-image {
+    display: block;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 38vw;
+    width: 100%;
+  }
+
+  .slideshow-text { 
+    h1 {
+      font-size: 26px;
+    }
+  }
+
+  .slideshow-text-right {
+    position: absolute;
+    right: 100px;
+    top: 20%;
+  }
+
+  .slideshow-text-color{
+
+  }
+}
+
+

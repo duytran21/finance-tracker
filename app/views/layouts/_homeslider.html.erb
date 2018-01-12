@@ -1,8 +1,8 @@
 <div id="homeslider">
 	<div class="home-slideshow">
-		<a class="slideshow-image" style="background-image: url('Slider/Slider1.jpg')">
+		<a class="slideshow-image" style="background-image: url(<%= image_path('Slider/Slider1.jpg') %>)">
 		</a>	
-		<div class="slideshow-text">
+		<div class="slideshow-text slideshow-text-right slideshow-text-color">
 			<h1>Title here</h1>
 			<hr>
 			<p>Verbiage</p>
@@ -11,9 +11,9 @@
 	</div>
 
 	<div class="home-slideshow">
-		<a class="slideshow-image" style="background-image: url('Slider/Slider1.jpg'">
+		<a class="slideshow-image" style="background-image: url(<%= image_path('Slider/Slider2.jpg') %>)">
 		</a>	
-		<div class="slideshow-text">
+		<div class="slideshow-text slideshow-text-right slideshow-text-color">
 			<h1>Title here</h1>
 			<hr>
 			<p>Verbiage</p>
@@ -22,9 +22,9 @@
 	</div>
 
 	<div class="home-slideshow">
-		<a class="slideshow-image" style="background-image: url('Slider/Slider1.jpg'">
+		<a class="slideshow-image" style="background-image: url(<%= image_path('Slider/Slider3.jpg') %>)">
 		</a>	
-		<div class="slideshow-text">
+		<div class="slideshow-text slideshow-text-right slideshow-text-color">
 			<h1>Title here</h1>
 			<hr>
 			<p>Verbiage</p>
@@ -33,7 +33,6 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="/app/assets/javascripts/slick.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#homeslider').slick({
