@@ -1,0 +1,35 @@
+<div id="homegallery">
+	<h2>My Gallery</h2>
+	<div id="homegallery-slider">
+		<%= link_to "", class: "gallery-slideshow-link" do %>
+			<h3>Title1 here</h3>
+			<%= image_tag('Slider/Slider1.jpg', alt: "Gallery-1") %>
+		<% end %>
+		<%= link_to "", class: "gallery-slideshow-link" do %>
+			<h3>Title2 here</h3>
+			<%= image_tag('Slider/Slider2.jpg', alt: "Gallery-2") %>
+		<% end %>
+		<%= link_to "", class: "gallery-slideshow-link" do %>
+			<h3>Title3 here</h3>
+			<%= image_tag('Slider/Slider3.jpg', alt: "Gallery-3") %>
+		<% end %>
+
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+		$('#homegallery-slider').slick({
+			arrows: true,
+			slidesToShow: 1,
+			fade: true,
+			slidesToScroll: 1,
+			dots: true,
+			autoplay: false,
+			autoplaySpeed: 5000,
+			prevArrow: '<div class="slick-prev"><i class="nav-arrow d-left"></i></div>',
+    		nextArrow: '<div class="slick-next"><i class="nav-arrow d-right"></i></div>'
+		});
+})
+
+</script>

@@ -9,3 +9,15 @@ a:hover, a:focus {
 	color: unset;
 	text-decoration: none;
 }
+
+.navbar-default {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+
+.navbar-default .navbar-brand:hover , .navbar-default .navbar-brand:focus {
+	color: #ccc;
+}
