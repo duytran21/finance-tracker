@@ -485,7 +485,7 @@ $slick-opacity-not-active: 0.25;
 
 .nav.navbar-right li {
 	.btn {
-		color: #fff !important;
+		color: #414042 !important;
 		margin-top: 5%;
 	}
 
@@ -509,9 +509,197 @@ $slick-opacity-not-active: 0.25;
 	}
 }
 
+.alert-container {
+  margin: 0 auto;
+  max-width: 1024px;
+  .alert {
+    margin-bottom: 5px;
+  }
+}
+
 /*==================Styling New Site=================*/
 
+/*==================Drawer Module====================*/
+
+.drawer-right {
+  position: fixed;
+  width: 300px;
+  right: -300px;
+  top: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 9;
+  transition: all 0.3s ease-in-out;
+  border-left: 1px solid #ccc;
+  background-color: #f6f6f6;
+}
+
+.drawer-header {
+  color: #414042;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+
+  h4 {
+    font-size: 16px;
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .drawer-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:before {
+      content: "\2715";
+      font-size: 18px;
+    }
+  }
+}
+
+.js-drawer-right {
+  .is-moved-by-drawer {
+    transform: translateX(-300px);
+  }
+
+  .drawer-right {
+    transform: translateX(-300px);
+  }
+}
+
+.form-group-cust {
+  padding: 10px 15px;
+}
+
+.form-control-cust {
+  margin: 0;
+}
+
+.checkbox-cust input[type="checkbox"] {
+  position: relative;
+  margin-left: 0;
+}
+
+.btn-black {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 10px 0;
+  border-radius: 0;
+  background-color: #000;
+  border: 0;
+  font-size: 16px;
+  font-family: $font-gotham-book;
+}
+
+.btn-devise {
+  display: block;
+  font-family: $font-gotham-book;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*==================End Drawer Module================*/
+
+/*==================Modal Module================*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 50px;
+}
+
+.modal-container {
+  width: 60%;
+  position: fixed;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  border-radius: 0;
+  
+}
+
+.modal-close {
+  text-align: right;
+
+  &:before {
+    content: "\2715";
+    font-size: 32px;
+    color: #f1f1f1;
+  }
+
+  &:hover, &:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+}
+
+.modal-opened {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-header {
+  background-color: #f1f1f1;
+  h4 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+
+
+/*==================End Modal Module==================*/
+
+
 /*==================Menu Navigation==================*/
+.navbar-mobile {
+  position: absolute;
+  top: 50px;
+  background-color: #414042;
+  width: 100%;
+  padding: 0;
+
+  ul {
+    padding-right: 0;
+    margin:0;
+    li {
+      padding: 0;
+      a {
+        color: #fff !important;
+        padding-left: 30px;
+        border-bottom: 1px solid #ccc;
+        line-height: 1.5;
+      }
+
+      .btn {
+        margin-top: 0 !important;
+        font-size: 16px;
+        text-transform: uppercase;
+        border-radius: 0;
+        background-color: #ccc;
+        border-color: #ccc;
+      }
+    }
+
+    .user-name {
+      color: #fff;
+      text-align: center;
+      padding: 10px 15px;
+    }
+  }
+}
+
+
 .navbar-right-cust {
   li {
     a {
@@ -527,10 +715,15 @@ $slick-opacity-not-active: 0.25;
 
 /*==================End Menu Navigation==============*/
 
+.main-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 55px;
+}
+
 /*==================Home Slider======================*/
 #homeslider {
   max-width: 1610px;
-  margin-top: 55px;
   padding: 0 50px;
   margin-left: auto;
   margin-right: auto;

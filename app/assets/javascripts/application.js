@@ -23,3 +23,18 @@ var hide_spinner = function() {
 var show_spinner = function() {
 	$('#spinner').show();
 }
+
+
+var navbar_mobile = function() {
+	const mq = window.matchMedia('(min-width: 768px)');
+	if (mq.matches){
+		$('#navbar-responsive').removeClass('navbar-mobile');
+	}
+	else{
+		$('#navbar-responsive').addClass('navbar-mobile');
+	}
+}
+
+
+window.addEventListener('load', navbar_mobile, false);
+window.addEventListener('resize', navbar_mobile, false);

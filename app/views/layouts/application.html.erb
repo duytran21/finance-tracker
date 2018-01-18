@@ -39,26 +39,16 @@
     <![endif]-->
   </head>
   <body>
-
+    <%= render 'layouts/drawer' %>
     <%= render 'layouts/navigation' %>
-    <%= render 'layouts/homeslider' %>
-    <%= render 'layouts/homeinfo' %>
-    <%= render 'layouts/homecategory' %>
-    <%= render 'layouts/homenewestblog' %>
-    <%= render 'layouts/homegallery' %>
-    <div class="container" style="margin-top: 100px;">
-      <div class="row">
-        <div class="col-lg-9">
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
- 
-      </div><!--/row-->
-
-
-
-    </div> <!-- /container -->
-    <%= render 'layouts/footer' %>
-    <%= debug(params) if Rails.env.development? %>
+    <%= render 'layouts/sign_up_modal' %>
+    <div class="main-wrapper is-moved-by-drawer">   
+        <div class="alert-container">
+            <%= bootstrap_flash %>
+        </div>         
+        <%= yield %>
+        <%= render 'layouts/footer' %>
+        <%= debug(params) if Rails.env.development? %>
+    </div>
   </body>
 </html>
