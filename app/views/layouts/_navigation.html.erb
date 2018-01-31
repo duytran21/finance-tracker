@@ -1,37 +1,52 @@
-<div class="navbar navbar-default navbar-fixed-top is-moved-by-drawer">
+ <div class="navbar navbar-default navbar-fixed-top is-moved-by-drawer">
   <div class="container">
-    <%= link_to "Home Page", root_path, class: "navbar-brand" %>
-    
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+      <div class="navbar-header">
+        <%= link_to "Home Page", root_path, class: "navbar-brand" %>
+      
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
       <div id="navbar-responsive" class="navbar-collapse collapse navbar-responsive-collapse ">
         <% if current_user %>
-          <ul class="nav navbar-nav">
-            <li><%= link_to "My Portfolio", my_portfolio_path  %></li>
-            <li><%= link_to "My Profile", edit_user_registration_path(current_user) %></li>
-            <li><%= link_to "My Friends", my_friends_path %></li>
-            <li><%= link_to "Blogs" %></li>
+          <ul class="nav navbar-nav" id="navbar-underlying-link">
+            <li><%= link_to "My Portfolio", my_portfolio_path, class: 'navbar-menu-link nav-active'  %></li>
+            <li><%= link_to "My Profile", edit_user_registration_path(current_user), class: 'navbar-menu-link' %></li>
+            <li><%= link_to "My Friends", my_friends_path, class: 'navbar-menu-link' %></li>
+            <li><%= link_to "Blogs", blogs_path, class: 'navbar-menu-link' %></li>
             
           </ul>
-          <ul class="nav navbar-right navbar-right-cust col-md-4">
-            <li class="col-md-8 user-name text-right">
+          <ul class="nav navbar-right navbar-right-cust">
+            <li class="user-name text-right">
               <i class="fa fa-user"></i>
               <%= current_user.full_name.present? ? current_user.full_name : current_user.email %>
             </li>
-            <li class="col-md-4 logout">
-              <%= link_to "Logout", destroy_user_session_path, class: "btn btn-xs btn-success", method: :delete %>
+            <li class="logout">
+              <%= link_to "Logout", destroy_user_session_path, class: "nav-btn-logout", method: :delete %>
             </li>
           </ul>
 
         <% else %>
-          <ul class="nav navbar-right navbar-right-cust col-md-4">
-            <li class="col-md-4"><%= link_to "Login", "#login", class: "drawer-sign-in"  %></li>
-            <li class="col-md-4"><%= link_to "Signup", "#sign_up", class: "modal-sign-up-link" %></li>
+          <ul class="nav navbar-right navbar-right-cust">
+            <li><%= link_to "Login", "#login", class: "drawer-sign-in"  %></li>
+            <li><%= link_to "Signup", "#sign_up", class: "modal-sign-up-link" %></li>
           </ul>
         <% end %>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.navbar-menu-link').on("mouseover", function(){
+    $(this).addClass("nav-active");
+
+    $(this).closest('.navbar-nav').find('li').find('a').not(this).each(function(){
+      $(this).removeClass('nav-active');
+    });
+  })
+})
+
+</script>

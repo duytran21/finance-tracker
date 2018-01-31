@@ -8,6 +8,8 @@
 a:hover, a:focus {
 	color: unset;
 	text-decoration: none;
+	outline: none;
+	outline-offset: 0;
 }
 
 .navbar-default {

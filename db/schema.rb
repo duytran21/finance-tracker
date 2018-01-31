@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171229053937) do
+ActiveRecord::Schema.define(version: 20180118021715) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.text     "description"
+    t.boolean  "isVisible"
+    t.string   "tags"
+    t.string   "img_url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "friendships", force: :cascade do |t|
     t.integer  "user_id"

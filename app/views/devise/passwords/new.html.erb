@@ -5,13 +5,14 @@
   </div>
   <div class="panel-body">
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, role: "form" }) do |f| %>
-      <div class="form-group">
+      <div class="form-group form-group-cust">
         <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+        <%= f.email_field :email, autofocus: true, class: 'form-control form-control-cust' %>
       </div>
 
-      <%= f.submit t('.send_me_reset_password_instructions', default: 'Send me reset password instructions'), class: 'btn btn-primary' %>
+      <%= f.submit t('.send_me_reset_password_instructions', default: 'Send me reset password instructions'), class: 'btn btn-primary btn-black' %>
     <% end %>
   </div>
+  <%= render 'devise/shared/links' %>
 </div>
-<%= render 'devise/shared/links' %>
+

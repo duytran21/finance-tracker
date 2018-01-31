@@ -1,3 +1,4 @@
+<% if !current_user %>
 <div id="drawer" class="drawer-right">
 	<div class="drawer-container">
 	  <div class="drawer-header">
@@ -27,3 +28,4 @@
 		<%= render 'devise/shared/links' %>
 	</div>
 </div>
+<% end %>

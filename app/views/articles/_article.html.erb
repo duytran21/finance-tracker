@@ -1,0 +1,136 @@
+<div class="arts-list-container">
+  <div class="arts-list-masonry" id="grid_container">
+    <div class="arts-item">
+      <%= link_to "#" , class: "arts-item-img" do %>
+        <%= image_tag('Slider/Slider4.jpg', alt: "Article-1") %>
+        
+      <% end %>
+      <div class="arts-item-content">
+        <%= link_to "#" do %>
+          <h3>Title1 here</h3>
+          <p>Content go here</p>
+        <% end %>
+      </div>
+    </div>
+    <div class="arts-item">
+      <%= link_to "#" , class: "arts-item-img" do %>
+        <%= image_tag('Slider/Slider3.jpg', alt: "Article-1") %>
+        
+      <% end %>
+      <div class="arts-item-content">
+        <%= link_to "#" do %>
+          <h3>Title1 here</h3>
+          <p>Content go here</p>
+        <% end %>
+      </div>
+    </div>
+    <div class="arts-item">
+      <%= link_to "#" , class: "arts-item-img" do %>
+        <%= image_tag('Slider/Slider5.jpg', alt: "Article-1") %>
+        
+      <% end %>
+      <div class="arts-item-content">
+        <%= link_to "#" do %>
+          <h3>Title1 here</h3>
+          <p>Content go here</p>
+        <% end %>
+      </div>
+    </div>
+    <div class="arts-item">
+      <%= link_to "#" , class: "arts-item-img" do %>
+        <%= image_tag('Slider/Slider2.jpg', alt: "Article-1") %>
+        
+      <% end %>
+      <div class="arts-item-content">
+        <%= link_to "#" do %>
+          <h3>Title1 here</h3>
+          <p>Content go here</p>
+        <% end %>
+      </div>
+    </div>
+    <div class="arts-item">
+      <%= link_to "#" , class: "arts-item-img" do %>
+        <%= image_tag('Slider/Slider1.jpg', alt: "Article-1") %>
+        
+      <% end %>
+      <div class="arts-item-content">
+        <%= link_to "#" do %>
+          <h3>Title1 here</h3>
+          <p>Content go here</p>
+        <% end %>
+      </div>
+    </div>
+    <div class="arts-item">
+      <%= link_to "#" , class: "arts-item-img" do %>
+        <%= image_tag('Slider/Slider4.jpg', alt: "Article-1") %>
+        
+      <% end %>
+      <div class="arts-item-content">
+        <%= link_to "#" do %>
+          <h3>Title1 here</h3>
+          <p>Content go here</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+function renderGrid() {
+  const mq = window.matchMedia( "(min-width: 990px)" );
+  var grid_respone = document.getElementById("grid_container");
+  var blocks = document.getElementById("grid_container").children;
+    
+  if (mq.matches){
+      if (blocks.length > 0){
+    grid_respone.style.width = "990px";
+    var pad = 10, cols = 3, newleft, newtop;
+        var maxTop = 0;
+        var totalHeight;
+        var bottomItem;
+    for (var i = 0; i < blocks.length; i++ ){
+      blocks[i].classList.add("arts-item-desktop");
+    }
+    for(var i = 1; i < blocks.length; i++){
+      if ( i % cols == 0){
+        newtop = (blocks[i-cols].offsetTop + blocks[i-cols].offsetHeight) + pad;
+        blocks[i].style.top = newtop + "px";
+                if ( maxTop < newtop ) {
+                  maxTop = newtop;
+                  bottomItem = blocks[i];
+                }
+      }
+      else{
+        if(blocks[i-cols]){
+          newtop = (blocks[i-cols].offsetTop + blocks[i-cols].offsetHeight) + pad;
+          blocks[i].style.top = newtop + "px";
+                    if ( maxTop < newtop ) {
+                      maxTop = newtop;
+                      bottomItem = blocks[i];
+                    }
+        }
+        newleft = (blocks[i-1].offsetLeft + blocks[i-1].offsetWidth) + pad;
+        blocks[i].style.left = newleft + "px";
+      }
+    }
+        totalHeight = maxTop + bottomItem.offsetHeight + 50;
+        grid_respone.style.height = totalHeight + "px";
+        /*console.log(totalHeight);
+        console.log(maxTop);
+        console.log(bottomItem.offsetHeight);
+        console.log(blocks[blocks.length-1].offsetHeight);*/
+      }
+  }
+  else {
+    grid_respone.style.width = "100%";
+        grid_respone.style.height = "";
+    for (var i = 0; i < blocks.length ; i++) {
+      blocks[i].classList.remove("arts-item-desktop");
+      blocks[i].style.top = "";
+      blocks[i].style.left = "";  
+    }
+  }
+}
+window.addEventListener("load", renderGrid, false);
+window.addEventListener("resize", renderGrid, false);
+</script>
