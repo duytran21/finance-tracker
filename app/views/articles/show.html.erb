@@ -7,7 +7,7 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @article.content %>
+  <%= sanitize @article.content %>
 </p>
 
 <p>
@@ -32,3 +32,45 @@
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
+
+
+<%= render 'article_header' %>
+<div class="arts-main-container">
+  <div class="art-banner" style="background-image: url(<%= image_path(@article.img_url) %>)">
+    <h1 class="art-title"><%= @article.title %></h1>
+  </div>
+
+  <div class="art-body-content">
+    <div class="art-left-content">
+      <div class="share-block">
+        <div class="count-total">
+          <span class="count-number">0</span>
+          <span class="count-share">shares</span>
+        </div>
+        <div class="share-social">
+          <div class="facebook-share share-square ">
+            <a class="share-popin" href="" target="_blank">
+              <span class="fa fa-facebook icon-social"></span>
+              <span class="share-count">0</span>
+            </a>
+          </div>
+
+          <div class="twitter-share share-square">
+            <a class="share-popin" href="" target="_blank">
+              <span class="fa fa-twitter icon-social"></span>
+              <span class="share-count">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="art-right-content">
+      <%= sanitize @article.content %>
+
+      <div class=art-tags>
+        <%= @article.tags %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,439 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*=======================Typography==============*/
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('Gotham-Light.eot');
+    src: url('Gotham-Light.eot?#iefix') format('embedded-opentype'),
+        url('Gotham-Light.woff2') format('woff2'),
+        url('Gotham-Light.woff') format('woff'),
+        url('Gotham-Light.ttf') format('truetype'),
+        url('Gotham-Light.svg#Gotham-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('Gotham-Book.eot');
+    src: url('Gotham-Book.eot?#iefix') format('embedded-opentype'),
+        url('Gotham-Book.woff2') format('woff2'),
+        url('Gotham-Book.woff') format('woff'),
+        url('Gotham-Book.ttf') format('truetype'),
+        url('Gotham-Book.svg#Gotham-Book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('Gotham-Medium.eot');
+    src: url('Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Gotham-Medium.woff2') format('woff2'),
+        url('Gotham-Medium.woff') format('woff'),
+        url('Gotham-Medium.ttf') format('truetype'),
+        url('Gotham-Medium.svg#Gotham-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('Georgia.eot');
+  src: url('Georgia.eot?#iefix') format('embedded-opentype'),
+    url('Georgia.woff2') format('woff2'),
+    url('Georgia.woff') format('woff'),
+    url('Georgia.ttf') format('truetype'),
+    url('Georgia.svg#Georgia') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia-Italic';
+  src: url('Georgia-Italic.eot');
+  src: url('Georgia-Italic.eot?#iefix') format('embedded-opentype'),
+    url('Georgia-Italic.woff2') format('woff2'),
+    url('Georgia-Italic.woff') format('woff'),
+    url('Georgia-Italic.ttf') format('truetype'),
+    url('Georgia-Italic.svg#Georgia-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('Baskerville.eot');
+    src: url('Baskerville.eot?#iefix') format('embedded-opentype'),
+        url('Baskerville.woff2') format('woff2'),
+        url('Baskerville.woff') format('woff'),
+        url('Baskerville.ttf') format('truetype'),
+        url('Baskerville.svg#Baskerville') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Book';
+  src: url('Avenir-Book.eot');
+  src: url('Avenir-Book.eot?#iefix') format('embedded-opentype'),
+    url('Avenir-Book.woff2') format('woff2'),
+    url('Avenir-Book.woff') format('woff'),
+    url('Avenir-Book.ttf') format('truetype'),
+    url('Avenir-Book.svg#Avenir-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Roman';
+  src: url('Avenir-Roman.eot');
+  src: url('Avenir-Roman.eot?#iefix') format('embedded-opentype'),
+    url('Avenir-Roman.woff2') format('woff2'),
+    url('Avenir-Roman.woff') format('woff'),
+    url('Avenir-Roman.ttf') format('truetype'),
+    url('Avenir-Roman.svg#Avenir-Roman') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Medium';
+  src: url('Avenir-Medium.eot');
+  src: url('Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+    url('Avenir-Medium.woff2') format('woff2'),
+    url('Avenir-Medium.woff') format('woff'),
+    url('Avenir-Medium.ttf') format('truetype'),
+    url('Avenir-Medium.svg#Avenir-Medium') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Black';
+  src: url('Avenir-Black.eot');
+  src: url('Avenir-Black.eot?#iefix') format('embedded-opentype'),
+    url('Avenir-Black.woff2') format('woff2'),
+    url('Avenir-Black.woff') format('woff'),
+    url('Avenir-Black.ttf') format('truetype'),
+    url('Avenir-Black.svg#Avenir-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+$font-gotham-book: 'Gotham-Book', sans-serif;
+$font-gotham-light: 'Gotham-Light', sans-serif;
+$font-gotham-medium: 'Gotham-Medium', sans-serif;
+$font-georgia: 'Georgia', sans-serif;
+$font-georgia-italic: 'Georgia-Italic', sans-serif;
+$font-baskerville: 'Baskerville', serif;
+$font-avenir-book: 'Avenir-Book', sans-serif;
+$font-avenir-roman: 'Avenir-Roman', sans-serif;
+$font-avenir-medium: 'Avenir-Medium', sans-serif;
+$font-avenir-black: 'Avenir-Black', sans-serif;
+
+/*================================================*/
+/*===================Article Index==============*/
+.arts-header {
+  background-color: #e6e7e8;
+  padding: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: $font-gotham-light;
+    font-size: 24px;
+  }
+}
+
+.arts-latest-container {
+  display: none;
+  @media only screen and (min-width: 990px){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1920px;
+    position: relative;
+    height: 500px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .arts-latest-left, .arts-latest-right {
+      width: 50%;
+      position: relative;
+
+    }
+
+    .arts-latest-left {
+      margin-right: 10px;
+    }
+
+    .arts-latest-right {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      .arts-latest-small {
+        width: 50%;
+        position: relative;
+        &:nth-child(2n+1){
+          padding-right: 5px;
+        }
+
+        &:nth-child(2n+0){
+          padding-left: 5px; 
+        }
+      }
+      .arts-top-right {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.arts-latest-container-mb{
+  display: block;
+  padding: 0 20px;
+
+  @media only screen and (min-width: 990px){
+    display: none;
+  }
+}
+
+.arts-latest-item {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+
+  .arts-latest-desc {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    background-color: rgba(0,0,0,0.6);
+    a{
+      display: block;
+      p {
+        margin: 0;
+        padding: 30px 5px;
+        color: #fff;
+      }
+    }
+  }
+  
+}
+.arts-main-container {
+  max-width: 1920px;
+  /*max-width: 1920px;*/
+  margin: 0 auto;
+  padding: 0 20px;
+  /*display: flex;*/
+  .arts-sidebar {
+    max-width: 200px;
+  }
+  .arts-list-container {
+      max-width: 1920px;
+      /*margin-left: 10px;
+      padding-left: 20px;*/
+  }
+}
+
+.arts-item {
+  padding-bottom: 30px;
+  .arts-item-img {
+    display: block;
+    transition: transform 0.3s ease-in-out;
+    img {
+      width: 100%;
+    }
+    &:hover, &:focus {
+      transform: scale(1.04);
+    }
+  }
+  .arts-item-content {
+    padding: 20px 30px;
+    margin-top: 10px;
+
+    a {
+      display: block;
+
+    }
+  }
+  &:nth-child(2n+1){
+    .arts-item-content{
+      background-color: #787c7a;
+      a {
+        color: #fff;
+      }
+    }  
+  }
+  &:nth-child(2n+0){
+    .arts-item-content{
+      background-color: #f3f4f1;
+    }  
+  }
+}
+
+.arts-item-desktop {
+  position: absolute !important;
+  width: 33% !important;
+}
+
+.arts-list-container {
+  position: relative;  
+}
+
+/*====================End Articles Index ================*/
+
+/*====================Articles Listing ===================*/
+.art-banner {
+	background-color: rgba(8,8,16,0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center center;
+    height: 150px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (min-width: 480px){
+    	height: 200px;
+    }
+
+    @media only screen and (min-width: 768px){
+    	height: 250px;
+    }
+
+    @media only screen and (min-width: 990px){
+    	height: 25vw;
+    }
+}
+
+.art-title {
+	color: #fff;
+	font-size: 28px;
+	text-align: center;
+	padding: 20px;
+}
+
+.art-body-content {
+	padding: 50px 20px;
+    margin: -50px auto 0;
+    background-color: #fff;
+    position: relative;
+    border-top: 5px solid #d7d7d7;
+    display: flex;
+    max-width: 1440px;
+
+    .art-left-content {
+		width: 20%;
+	}
+
+	.art-right-content {
+		width: 80%;
+	}
+}
+
+.share-block {
+	width: 130px;
+	border: 1px solid #e6e7e8;
+	margin: 0 auto;
+}
+
+.count-total {
+	width: 100%;
+	background-color: #414042;
+	padding: 25px;
+	text-align: center;
+}
+
+.count-number {
+	color: #fff;
+    font-size: 30px;
+    display: block;
+}
+
+.count-share {
+	color: #ccc;
+	font-size: 14px;
+}
+
+.share-social {
+	display: flex;
+
+	.twitter-share {
+		&:hover, &:focus {
+			background-color: #00aced;
+		}
+	}
+
+	.facebook-share {
+		&:hover, &:focus {
+			background-color: #3b5998;
+			
+		}
+	}
+
+	.share-square {
+		position: relative;
+		width: 50%;
+		height: 65px;
+		line-height: 67px;
+		text-align: center;
+		-webkit-transition: background-color 0.3s ease-in-out;
+        -o-transition: background-color 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover, &:focus {
+        	.icon-social {
+				transform: translateY(-45px);
+			}
+
+			.share-count {
+				bottom: 0;
+			}
+        }
+
+		span {
+			-webkit-transition: opacity 0.3s ease-in-out,visibility 0.3s ease-in-out,transform 0.3s ease-in-out,bottom 0.3s ease-in-out;
+            -o-transition: opacity 0.3s ease-in-out,visibility 0.3s ease-in-out,transform 0.3s ease-in-out,bottom 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out,visibility 0.3s ease-in-out,transform 0.3s ease-in-out,bottom 0.3s ease-in-out;
+		}
+	}
+}
+
+.share-popin {
+	overflow: hidden;
+    display: inline-block;
+    vertical-align: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.share-count {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 64px;
+    text-align: center;
+    left: 0;
+    bottom: -100%;
+    font-size: 20px;
+    font-family: $font-gotham-book;
+    color: #fff;
+}
+
+
+
+
+
+
+/*===================End Articles Listing ================*/
