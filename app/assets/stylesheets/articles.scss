@@ -350,7 +350,7 @@ $font-avenir-black: 'Avenir-Black', sans-serif;
 
 .count-total {
 	width: 100%;
-	background-color: #414042;
+	background-color: #000;
 	padding: 25px;
 	text-align: center;
 }
@@ -376,6 +376,7 @@ $font-avenir-black: 'Avenir-Black', sans-serif;
 	}
 
 	.facebook-share {
+    border-right: 1px solid #e6e7e8;
 		&:hover, &:focus {
 			background-color: #3b5998;
 			
@@ -431,9 +432,43 @@ $font-avenir-black: 'Avenir-Black', sans-serif;
     color: #fff;
 }
 
-
-
-
-
-
 /*===================End Articles Listing ================*/
+
+
+/*============Article Content Style==========*/
+.art-tags{
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.art-pj-info {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.art-pj-content {
+  display: flex;
+
+  .art-pj-content-left, .art-pj-content-right {
+    width: 50%;
+    text-align: center;
+
+    h3 {
+      margin: 15px 0;
+    }
+  }
+  .art-pj-content-left{
+    color: #f8fff1;
+    background-color: #857e7c;
+  }
+
+  .art-pj-content-right{
+    background-color: #f8fff0;
+    color: #847e7b;
+  }
+}
+
+/*============End Article Content Style==========*/
