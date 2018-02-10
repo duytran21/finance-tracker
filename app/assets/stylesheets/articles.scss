@@ -326,20 +326,45 @@ $font-avenir-black: 'Avenir-Black', sans-serif;
 
 .art-body-content {
 	padding: 50px 20px;
-    margin: -50px auto 0;
-    background-color: #fff;
-    position: relative;
-    border-top: 5px solid #d7d7d7;
-    display: flex;
-    max-width: 1440px;
+  margin: -50px auto 0;
+  background-color: #fff;
+  position: relative;
+  border-top: 5px solid #d7d7d7;
+  max-width: 1440px;
 
-    .art-left-content {
-		width: 20%;
-	}
+}
 
-	.art-right-content {
-		width: 80%;
-	}
+.art-body-content.element-fixed .art-left-content {
+  position: fixed;
+  top: 0;
+  -moz-transform: translateY(80px);
+  -ms-transform: translateY(80px);
+  -webkit-transform: translateY(80px);
+  transform: translateY(80px);
+  -webkit-transition: transform 0.3s ease-in-out 0.05s;
+  -o-transition: transform 0.3s ease-in-out 0.05s;
+  transition: transform 0.3s ease-in-out 0.05s;
+}
+
+.art-body-content.element-abs-bottom .art-left-content {
+  position: absolute;
+  bottom: 50px;
+  top: auto;
+}
+
+.art-left-content {
+  width: 130px;
+  position: absolute;
+  top: auto;
+  margin-right: 20px;
+  float: left;
+  -webkit-transition: top 0.3s ease-in-out;
+  -o-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
+}
+
+.art-right-content {
+  margin-left: 170px;
 }
 
 .share-block {
