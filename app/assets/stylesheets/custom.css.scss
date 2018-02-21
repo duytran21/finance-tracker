@@ -1315,6 +1315,62 @@ $slick-opacity-not-active: 0.25;
   }
 }
 
+/*===============Page-Small==============*/
+.page-small {
+  max-width: 1024px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.page-full {
+  max-width: 100%;
+  padding: 50px;
+}
+
+.panel-heading {
+  h4 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+.action-field {
+  text-align: center;
+}
+
+.field-box-cust {
+  width: 100%;
+  padding: 15px;
+  margin-left: 0;
+}
+
+/*================Index Table Info============*/
+.table-info {
+  border-collapse: collapse;
+  width: 100%;
+
+  td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+
+  th {
+    padding: 15px 20px;
+    text-align: left;
+    background-color: #414042;
+    color: #fff;
+  }
+}
 
 
 
