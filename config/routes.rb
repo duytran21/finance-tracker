@@ -22,5 +22,5 @@ Rails.application.routes.draw do
 
   post 'add_friend', to: "users#add_friend"
 
-  get 'blogs', to: "articles#index"
+  get 'blogs', to: "articles#blogs"
 end

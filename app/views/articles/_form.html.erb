@@ -13,36 +13,37 @@
 
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "field-box-cust" %>
   </div>
 
   <div class="field">
     <%= f.label :content %>
-    <%= f.text_area :content, :class => "tinymce" %>
+    <%= f.text_area :content, :class => "tinymce field-box-cust"  %>
   </div>
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: "field-box-cust" %>
   </div>
 
   <div class="field">
     <%= f.label :isVisible %>
-    <%= f.check_box :isVisible %>
+    <%= f.check_box :isVisible, class: "field-box-cust" %>
   </div>
 
   <div class="field">
     <%= f.label :tags %>
-    <%= f.text_field :tags %>
+    <%= f.text_field :tags, class: "field-box-cust" %>
   </div>
 
   <div class="field">
     <%= f.label :img_url %>
-    <%= f.text_field :img_url %>
+    <%= f.text_field :img_url, class: "field-box-cust" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="action-field">
+    <%= f.submit class: "btn btn-primary btn-black" %>
+    <%= link_to 'Cancel', articles_path, class: "btn-blank" %>
   </div>
 <% end %>
 

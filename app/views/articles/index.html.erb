@@ -1,25 +1,17 @@
-<%= render 'article_header' %>
-<%= render 'article_latest' %>
-
-<div class="arts-main-container">
-  <%#= render 'sidebar' %>
-  <%= render 'article' %>
+<div class="page-small panel-default">
+<div class="panel-heading">
+<h4>Articles</h4>
 </div>
-
-
-
-<h1>Articles</h1>
-
-<table>
+<div class="panel-body">
+<table class="table-info">
   <thead>
     <tr>
       <th>Title</th>
-      <th>Content</th>
       <th>Description</th>
       <th>Isvisible</th>
       <th>Tags</th>
       <th>Img url</th>
-      <th colspan="3"></th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -27,11 +19,10 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
-        <td><%= sanitize article.content %></td>
         <td><%= article.description %></td>
         <td><%= article.isVisible %></td>
         <td><%= article.tags %></td>
-        <td><%= sanitize article.img_url %></td>
+        <td><%= article.img_url %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -40,6 +31,6 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Article', new_article_path %>
+<%= link_to 'New Article', new_article_path, class: "btn btn-primary btn-black" %>
+</div>
+</div>

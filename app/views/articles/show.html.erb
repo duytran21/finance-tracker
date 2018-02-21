@@ -1,39 +1,3 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= sanitize @article.content %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @article.description %>
-</p>
-
-<p>
-  <strong>Isvisible:</strong>
-  <%= @article.isVisible %>
-</p>
-
-<p>
-  <strong>Tags:</strong>
-  <%= @article.tags %>
-</p>
-
-<p>
-  <strong>Img url:</strong>
-  <%= @article.img_url %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
-
-
 <%= render 'article_header' %>
 <div class="arts-main-container">
   <div class="art-banner" style="background-image: url(<%= image_path(@article.img_url) %>)">
@@ -41,7 +5,14 @@
   </div>
 
   <div class="art-body-content">
-    <div class="art-left-content" id="element-social-share">
+    <div class="art-social-share skip-desktop">
+      <div  class="share-block-mb">
+        <span class="count-number">0</span>
+        <span class="fa fa-facebook icon-social"></span>
+        <span class="fa fa-twitter icon-social"></span>
+      </div>
+    </div>
+    <div class="art-left-content skip-mobile" id="element-social-share">
       <div class="share-block">
         <div class="count-total">
           <span class="count-number">0</span>
@@ -66,6 +37,7 @@
     </div>
 
     <div class="art-right-content" id="art-element-content">
+      <%= link_to 'Edit', edit_article_path(@article), class: "btn-modify btn-abs btn" %>
       <%= sanitize @article.content %>
 
       <div class=art-tags>

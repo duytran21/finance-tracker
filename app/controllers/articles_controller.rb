@@ -7,6 +7,9 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+  def blogs
+  end
+
   # GET /articles/1
   # GET /articles/1.json
   def show
