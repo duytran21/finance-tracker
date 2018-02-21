@@ -1,12 +1,12 @@
 /*=======================Typography==============*/
 @font-face {
     font-family: 'Gotham-Light';
-    src: font-url('Gotham-Light.eot');
-    src: font-url('Gotham-Light.eot?#iefix') format('embedded-opentype'),
-        font-url('Gotham-Light.woff2') format('woff2'),
-        font-url('Gotham-Light.woff') format('woff'),
-        font-url('Gotham-Light.ttf') format('truetype'),
-        font-url('Gotham-Light.svg#Gotham-Light') format('svg');
+    src: asset-url('Gotham-Light.eot');
+    src: asset-url('Gotham-Light.eot?#iefix') format('embedded-opentype'),
+        asset-url('Gotham-Light.woff2') format('woff2'),
+        asset-url('Gotham-Light.woff') format('woff'),
+        asset-url('Gotham-Light.ttf') format('truetype'),
+        asset-url('Gotham-Light.svg#Gotham-Light') format('svg');
     font-weight: 300;
     font-style: normal;
 }
@@ -36,12 +36,12 @@
 
 @font-face {
   font-family: 'Georgia';
-  src: font-url('Georgia.eot');
-  src: font-url('Georgia.eot?#iefix') format('embedded-opentype'),
-    font-url('Georgia.woff2') format('woff2'),
-    font-url('Georgia.woff') format('woff'),
-    font-url('Georgia.ttf') format('truetype'),
-    font-url('Georgia.svg#Georgia') format('svg');
+  src: asset-url('Georgia.eot');
+  src: asset-url('Georgia.eot?#iefix') format('embedded-opentype'),
+    asset-url('Georgia.woff2') format('woff2'),
+    asset-url('Georgia.woff') format('woff'),
+    asset-url('Georgia.ttf') format('truetype'),
+    asset-url('Georgia.svg#Georgia') format('svg');
   font-weight: normal;
   font-style: normal;
 }
