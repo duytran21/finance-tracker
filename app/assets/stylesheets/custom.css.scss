@@ -1,59 +1,59 @@
 /*=======================Typography==============*/
 @font-face {
     font-family: 'Gotham-Light';
-    src: url('Gotham-Light.eot');
-    src: url('Gotham-Light.eot?#iefix') format('embedded-opentype'),
-        url('Gotham-Light.woff2') format('woff2'),
-        url('Gotham-Light.woff') format('woff'),
-        url('Gotham-Light.ttf') format('truetype'),
-        url('Gotham-Light.svg#Gotham-Light') format('svg');
+    src: font-url('Gotham-Light.eot');
+    src: font-url('Gotham-Light.eot?#iefix') format('embedded-opentype'),
+        font-url('Gotham-Light.woff2') format('woff2'),
+        font-url('Gotham-Light.woff') format('woff'),
+        font-url('Gotham-Light.ttf') format('truetype'),
+        font-url('Gotham-Light.svg#Gotham-Light') format('svg');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Gotham Book';
-    src: url('Gotham-Book.eot');
-    src: url('Gotham-Book.eot?#iefix') format('embedded-opentype'),
-        url('Gotham-Book.woff2') format('woff2'),
-        url('Gotham-Book.woff') format('woff'),
-        url('Gotham-Book.ttf') format('truetype'),
-        url('Gotham-Book.svg#Gotham-Book') format('svg');
+    src: font-url('Gotham-Book.eot');
+    src: font-url('Gotham-Book.eot?#iefix') format('embedded-opentype'),
+        font-url('Gotham-Book.woff2') format('woff2'),
+        font-url('Gotham-Book.woff') format('woff'),
+        font-url('Gotham-Book.ttf') format('truetype'),
+        font-url('Gotham-Book.svg#Gotham-Book') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gotham-Medium';
-    src: url('Gotham-Medium.eot');
-    src: url('Gotham-Medium.eot?#iefix') format('embedded-opentype'),
-        url('Gotham-Medium.woff2') format('woff2'),
-        url('Gotham-Medium.woff') format('woff'),
-        url('Gotham-Medium.ttf') format('truetype'),
-        url('Gotham-Medium.svg#Gotham-Medium') format('svg');
+    src: font-url('Gotham-Medium.eot');
+    src: font-url('Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+        font-url('Gotham-Medium.woff2') format('woff2'),
+        font-url('Gotham-Medium.woff') format('woff'),
+        font-url('Gotham-Medium.ttf') format('truetype'),
+        font-url('Gotham-Medium.svg#Gotham-Medium') format('svg');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
   font-family: 'Georgia';
-  src: url('Georgia.eot');
-  src: url('Georgia.eot?#iefix') format('embedded-opentype'),
-    url('Georgia.woff2') format('woff2'),
-    url('Georgia.woff') format('woff'),
-    url('Georgia.ttf') format('truetype'),
-    url('Georgia.svg#Georgia') format('svg');
+  src: font-url('Georgia.eot');
+  src: font-url('Georgia.eot?#iefix') format('embedded-opentype'),
+    font-url('Georgia.woff2') format('woff2'),
+    font-url('Georgia.woff') format('woff'),
+    font-url('Georgia.ttf') format('truetype'),
+    font-url('Georgia.svg#Georgia') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Georgia-Italic';
-  src: url('Georgia-Italic.eot');
-  src: url('Georgia-Italic.eot?#iefix') format('embedded-opentype'),
-    url('Georgia-Italic.woff2') format('woff2'),
-    url('Georgia-Italic.woff') format('woff'),
-    url('Georgia-Italic.ttf') format('truetype'),
-    url('Georgia-Italic.svg#Georgia-Italic') format('svg');
+  src: font-url('Georgia-Italic.eot');
+  src: font-url('Georgia-Italic.eot?#iefix') format('embedded-opentype'),
+    font-url('Georgia-Italic.woff2') format('woff2'),
+    font-url('Georgia-Italic.woff') format('woff'),
+    font-url('Georgia-Italic.ttf') format('truetype'),
+    font-url('Georgia-Italic.svg#Georgia-Italic') format('svg');
   font-weight: normal;
   font-style: italic;
 }
@@ -62,60 +62,60 @@
 
 @font-face {
     font-family: 'Baskerville';
-    src: url('Baskerville.eot');
-    src: url('Baskerville.eot?#iefix') format('embedded-opentype'),
-        url('Baskerville.woff2') format('woff2'),
-        url('Baskerville.woff') format('woff'),
-        url('Baskerville.ttf') format('truetype'),
-        url('Baskerville.svg#Baskerville') format('svg');
+    src: font-url('Baskerville.eot');
+    src: font-url('Baskerville.eot?#iefix') format('embedded-opentype'),
+        font-url('Baskerville.woff2') format('woff2'),
+        font-url('Baskerville.woff') format('woff'),
+        font-url('Baskerville.ttf') format('truetype'),
+        font-url('Baskerville.svg#Baskerville') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir-Book';
-  src: url('Avenir-Book.eot');
-  src: url('Avenir-Book.eot?#iefix') format('embedded-opentype'),
-    url('Avenir-Book.woff2') format('woff2'),
-    url('Avenir-Book.woff') format('woff'),
-    url('Avenir-Book.ttf') format('truetype'),
-    url('Avenir-Book.svg#Avenir-Book') format('svg');
+  src: font-url('Avenir-Book.eot');
+  src: font-url('Avenir-Book.eot?#iefix') format('embedded-opentype'),
+    font-url('Avenir-Book.woff2') format('woff2'),
+    font-url('Avenir-Book.woff') format('woff'),
+    font-url('Avenir-Book.ttf') format('truetype'),
+    font-url('Avenir-Book.svg#Avenir-Book') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir-Roman';
-  src: url('Avenir-Roman.eot');
-  src: url('Avenir-Roman.eot?#iefix') format('embedded-opentype'),
-    url('Avenir-Roman.woff2') format('woff2'),
-    url('Avenir-Roman.woff') format('woff'),
-    url('Avenir-Roman.ttf') format('truetype'),
-    url('Avenir-Roman.svg#Avenir-Roman') format('svg');
+  src: font-url('Avenir-Roman.eot');
+  src: font-url('Avenir-Roman.eot?#iefix') format('embedded-opentype'),
+    font-url('Avenir-Roman.woff2') format('woff2'),
+    font-url('Avenir-Roman.woff') format('woff'),
+    font-url('Avenir-Roman.ttf') format('truetype'),
+    font-url('Avenir-Roman.svg#Avenir-Roman') format('svg');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir-Medium';
-  src: url('Avenir-Medium.eot');
-  src: url('Avenir-Medium.eot?#iefix') format('embedded-opentype'),
-    url('Avenir-Medium.woff2') format('woff2'),
-    url('Avenir-Medium.woff') format('woff'),
-    url('Avenir-Medium.ttf') format('truetype'),
-    url('Avenir-Medium.svg#Avenir-Medium') format('svg');
+  src: font-url('Avenir-Medium.eot');
+  src: font-url('Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+    font-url('Avenir-Medium.woff2') format('woff2'),
+    font-url('Avenir-Medium.woff') format('woff'),
+    font-url('Avenir-Medium.ttf') format('truetype'),
+    font-url('Avenir-Medium.svg#Avenir-Medium') format('svg');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir-Black';
-  src: url('Avenir-Black.eot');
-  src: url('Avenir-Black.eot?#iefix') format('embedded-opentype'),
-    url('Avenir-Black.woff2') format('woff2'),
-    url('Avenir-Black.woff') format('woff'),
-    url('Avenir-Black.ttf') format('truetype'),
-    url('Avenir-Black.svg#Avenir-Black') format('svg');
+  src: font-url('Avenir-Black.eot');
+  src: font-url('Avenir-Black.eot?#iefix') format('embedded-opentype'),
+    font-url('Avenir-Black.woff2') format('woff2'),
+    font-url('Avenir-Black.woff') format('woff'),
+    font-url('Avenir-Black.ttf') format('truetype'),
+    font-url('Avenir-Black.svg#Avenir-Black') format('svg');
   font-weight: 900;
   font-style: normal;
 }
