@@ -29,6 +29,9 @@
           </ul>
 
         <% else %>
+        <ul class="nav navbar-nav" id="navbar-underlying-link">
+           <li><%= link_to "Blogs", blogs_path, class: 'navbar-menu-link' %></li>
+        </ul>
           <ul class="nav navbar-right navbar-right-cust">
             <li><%= link_to "Login", "#login", class: "drawer-sign-in"  %></li>
             <li><%= link_to "Signup", "#sign_up", class: "modal-sign-up-link" %></li>

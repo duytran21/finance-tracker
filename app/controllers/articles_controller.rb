@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:blogs, :show]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   # GET /articles
