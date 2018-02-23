@@ -9,6 +9,18 @@ class User < ApplicationRecord
   has_many :friendships
   has_many :friends, through: :friendships
 
+  def active_for_authentication?
+    super && approved?
+  end
+
+  def inactive_message
+    if !approved?
+      :not_approved
+    else
+      super # User whatever other msg
+    end
+  end
+  
   def full_name 
   	return "#{first_name} #{last_name}".strip if (first_name || last_name)
   	"Anonymous"
