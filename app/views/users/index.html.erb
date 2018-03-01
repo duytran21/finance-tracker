@@ -27,7 +27,7 @@
 				<td><%= f.label :name, user.full_name %></td>
 				<td><%= f.label :email, user.email %></td>
 				<td><%= f.label :approved, user.approved ? "Active" : "Inactive" %><%#= f.select :approved, ['true', 'false'], selected: user.approved %></td>
-				<td><%= f.label :role, user.role.name.capitalize %><%#= f.collection_select(:role_id, Role.all, :id, :name ) %></td>
+				<td><%= f.label :role, user.role_id %><%#= f.collection_select(:role_id, Role.all, :id, :name ) %></td>
 				<td><%= link_to "Edit", edit_user_path(user) %></td>
 				<td><%= link_to "Destroy", user, method: :delete, data: "Are you sure to delete?" %></td>
 				<% end %>
