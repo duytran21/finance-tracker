@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	before_action :require_admin, only: [:index, :edit, :destroy, :update]
+	
 	def my_portfolio
 		@user_stocks = current_user.stocks
 		@user = current_user
@@ -38,11 +40,42 @@ class UsersController < ApplicationController
 	end
 
 	def index
+=begin
 		if params[:approved] == "false"
 			@users = User.where(approved: false)
 		else
 			@users = User.all
 		end
+=end
+		@users = current_user.except_current_user(User.all)
 	end
 
+	def edit
+	  @user = User.find(params[:id])
+	end
+
+	def update
+	  #debugger
+	  @user = User.find(params[:id])
+	  respond_to do |format|
+	      if @user.update(user_params)
+	        format.html { redirect_to users_path, notice: 'User was successfully updated.' }
+	        format.json { render :show, status: :ok }
+	      end
+  	  end
+	end
+
+	private
+		def set_user
+	      @user = User.find(params[:id])
+	    end
+		def require_admin
+			if current_user.role.name != 'admin'
+				#flash[:error] = "You need admin permision to perform this action!"
+				redirect_to root_path, :flash => { :error => "You need admin permision to perform this action!" }
+			end
+		end
+		def user_params
+			params.require(:user).permit(:approved, :role_id)
+		end
 end

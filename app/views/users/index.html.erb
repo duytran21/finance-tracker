@@ -1,1 +1,40 @@
-<h1>Admin Index Page </h1>
+<div class="page-small panel-default">
+<div class="panel-heading">
+<h4>Admin Page</h4>
+</div>
+
+<div class="panel-body">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th colspan="4" class="header">
+					<h2>List of Users</h2>
+				</th>
+			</tr>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Status</th>
+				<th>Role</th>
+				<th colspan="2">Actions</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @users.each do |user| %>
+			<tr>
+				<%= form_for(user) do |f| %>
+				<td><%= f.label :name, user.full_name %></td>
+				<td><%= f.label :email, user.email %></td>
+				<td><%= f.label :approved, user.approved ? "Active" : "Inactive" %><%#= f.select :approved, ['true', 'false'], selected: user.approved %></td>
+				<td><%= f.label :role, user.role.name.capitalize %><%#= f.collection_select(:role_id, Role.all, :id, :name ) %></td>
+				<td><%= link_to "Edit", edit_user_path(user) %></td>
+				<td><%= link_to "Destroy", user, method: :delete, data: "Are you sure to delete?" %></td>
+				<% end %>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+</div>

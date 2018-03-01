@@ -1,0 +1,30 @@
+<div class="page-small panel-default">
+<div class="panel-heading">
+<h4>Admin Edit User</h4>
+</div>
+
+<div class="panel-body">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Approved</th>
+				<th>Role</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<%=form_for(@user) do |f| %>
+					<td><%= f.label :name, @user.full_name %></td>
+					<td><%= f.label :email, @user.email %></td>
+					<td><%= f.select :approved, ["true", "false"], selected: @user.approved %></td>
+					<td><%= f.collection_select(:role_id, Role.all, :id, :name) %></td>
+					<td><%= f.submit class: "btn btn-primary btn-black" %></td>
+				<% end %>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>

@@ -268,6 +268,18 @@ $slick-opacity-not-active: 0.25;
   margin: 0;  
 }
 
+.nav {
+  .navbar-right-link {
+    a {
+      color: #fff;
+      &:hover, &:focus {
+        background-color: initial;
+        color: #ccc;
+      }
+    }
+  }
+}
+
 .navbar-menu-link {
   color: #fff !important;
 
@@ -275,6 +287,36 @@ $slick-opacity-not-active: 0.25;
 
 .nav-active {
   border-bottom: 2px solid #fff;
+}
+
+.account-links {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  top: 52px;
+  color: #414042;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 200;
+  border-top: 5px solid #fff;
+
+  ul {
+    list-style: none;
+    padding: 20px;
+    text-align: left;
+
+    li:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.user-name:hover{
+  @media only screen and (min-width: 768px){
+    .account-links{
+      display: block;
+    }
+  }
 }
 
 
@@ -484,6 +526,7 @@ $slick-opacity-not-active: 0.25;
 
 .user-name {
       color: #fff;
+      height: 52px;
 }
 
 .navbar-right-cust {
@@ -496,7 +539,7 @@ $slick-opacity-not-active: 0.25;
   flex-direction: column;
 
   li {
-    a {
+    .white-text {
       color: #fff;
       &:hover, &:focus {
         background-color: unset; 
@@ -519,6 +562,7 @@ $slick-opacity-not-active: 0.25;
     }
   }
 }
+
 
 
 /*==================End Menu Navigation==============*/
@@ -1110,6 +1154,9 @@ $slick-opacity-not-active: 0.25;
     color: #fff;
   }
 }
+
+/*================Dropdown Menu Account=============*/
+
 
 
 

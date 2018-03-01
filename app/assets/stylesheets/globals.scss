@@ -235,17 +235,22 @@ hr {
   position: absolute;
 }
 
+.btn-lg-cust {
+  padding: 12px;
+  margin: 15px 0;
+}
+
 .skip-mobile {
-  display: none;
+  display: none !important;
   @media only screen and (min-width: 768px){
-    display: block;
+    display: block !important;
   }
 }
 
 .skip-desktop {
-  display: block;
+  display: block !important;
   @media only screen and (min-width: 768px){
-    display: none;
+    display: none !important;
   }
 }
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180223025518) do
+ActiveRecord::Schema.define(version: 20180227012633) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -30,6 +30,12 @@ ActiveRecord::Schema.define(version: 20180223025518) do
     t.datetime "updated_at", null: false
     t.index ["friend_id"], name: "index_friendships_on_friend_id"
     t.index ["user_id"], name: "index_friendships_on_user_id"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "stocks", force: :cascade do |t|
@@ -63,9 +69,11 @@ ActiveRecord::Schema.define(version: 20180223025518) do
     t.string   "first_name"
     t.string   "last_name"
     t.boolean  "approved",               default: false, null: false
+    t.integer  "role_id"
     t.index ["approved"], name: "index_users_on_approved"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
 end

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
 
   resources :user_stocks, except: [:show, :edit, :update]
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show, :index, :edit, :update]
   resources :friendships
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'welcome#index'
@@ -23,4 +23,5 @@ Rails.application.routes.draw do
   post 'add_friend', to: "users#add_friend"
 
   get 'blogs', to: "articles#blogs"
+  
 end

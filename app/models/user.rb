@@ -9,6 +9,9 @@ class User < ApplicationRecord
   has_many :friendships
   has_many :friends, through: :friendships
 
+  belongs_to :role
+  before_create :set_default_role
+
   def active_for_authentication?
     super && approved?
   end
@@ -75,6 +78,19 @@ class User < ApplicationRecord
   	#Reference this page http://guides.rubyonrails.org/v3.2/active_record_querying.html
   	#Example: User.where("email like ?", "%@%") 
   	#Recommend querry by array method to avoid SQL injection exploits with String only.
+  end
+
+  def isAdmin?
+    if self.role.name == "admin" 
+      return true
+    else
+      return false
+    end
+  end
+
+  private
+  def set_default_role
+    self.role ||= Role.find_by_name('registered')
   end
 
 end
