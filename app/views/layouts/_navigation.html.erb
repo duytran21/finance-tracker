@@ -29,7 +29,7 @@
                   <% end %>
                   <li><%= link_to "My Profile", edit_user_registration_path(current_user) %></li>
                   <li><%= link_to "My Posts" %></li>
-                  <li><%= link_to "Create Blog", new_article_path %></li>
+                  <li><%= link_to "Create Blog", new_user_article_path(current_user) %></li>
                   <li><%= link_to "Logout", destroy_user_session_path, class: "nav-btn-logout", method: :delete %></li>
                 </ul>
               </div>

@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   
-  resources :articles
   devise_for :users, :controllers => {
                         :registrations => 'user/registrations',
   }
 
 
   resources :user_stocks, except: [:show, :edit, :update]
-  resources :users, only: [:show, :index, :edit, :update]
+  resources :users, only: [:show, :index, :edit, :update] do
+    resources :articles
+  end
   resources :friendships
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'welcome#index'
@@ -23,5 +24,9 @@ Rails.application.routes.draw do
   post 'add_friend', to: "users#add_friend"
 
   get 'blogs', to: "articles#blogs"
+
+  #resources :users do
+  #  resources :articles
+  #end
   
 end

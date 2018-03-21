@@ -1,4 +1,4 @@
-<%= form_for(article) do |f| %>
+<%= form_for([current_user, article]) do |f| %>
   <% if article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -43,7 +43,7 @@
 
   <div class="action-field">
     <%= f.submit class: "btn btn-primary btn-black" %>
-    <%= link_to 'Cancel', articles_path, class: "btn-blank" %>
+    <%= link_to 'Cancel', user_articles_path, class: "btn-blank" %>
   </div>
 <% end %>
 

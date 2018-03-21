@@ -1,11 +1,12 @@
 class ArticlesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:blogs, :show]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = current_user.articles
   end
 
   def blogs
@@ -29,11 +30,11 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-
+    @article.user = current_user
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render :show, status: :created, location: @article }
+        format.html { redirect_to user_article_path(current_user, @article), notice: 'Article was successfully created.' }
+        format.json { render :show, status: :created, location: user_article_path(current_user, @article) }
       else
         format.html { render :new }
         format.json { render json: @article.errors, status: :unprocessable_entity }
@@ -46,8 +47,8 @@ class ArticlesController < ApplicationController
   def update
     respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
-        format.json { render :show, status: :ok, location: @article }
+        format.html { redirect_to user_article_path, notice: 'Article was successfully updated.' }
+        format.json { render :show, status: :ok, location: user_article_path }
       else
         format.html { render :edit }
         format.json { render json: @article.errors, status: :unprocessable_entity }
@@ -69,10 +70,18 @@ class ArticlesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
+      #@article = Article.find_by_user_id(params[:user_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article).permit(:title, :content, :description, :isVisible, :tags, :img_url)
+    end
+
+    def require_same_user
+      if current_user != @article.user and !current_user.isAdmin?
+        flash[:danger] = "You can only edit or delete your own articles"
+        redirect_to root_path
+      end
     end
 end

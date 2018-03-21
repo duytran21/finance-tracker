@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :stocks, through: :user_stocks
   has_many :friendships
   has_many :friends, through: :friendships
+  has_many :articles
 
   belongs_to :role
   before_create :set_default_role
