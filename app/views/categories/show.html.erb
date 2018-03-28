@@ -1,0 +1,12 @@
+<div class="page-small panel-default">
+	<p id="notice"><%= notice %></p>
+	<div class="panel-heading">
+		<h4><%= @category.name %></h4>
+	</div>
+	<div class="panel-body">
+		
+
+	<%= link_to 'Edit', edit_category_path(@category) %> |
+	<%= link_to 'Back', categories_path, :class => "btn-devise" %>
+	</div>
+</div>

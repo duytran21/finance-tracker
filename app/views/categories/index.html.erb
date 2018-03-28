@@ -1,0 +1,26 @@
+<div class="page-small panel-default">
+    <p id="notice"><%= notice %></p>
+  <div class="panel-heading">
+    <h4>Categories</h4>
+  </div>
+  <div class="panel-body">
+    <% if @categories.count > 0 %>
+    <ul class="flex-container list-no-style">
+      <% @categories.each do |category| %>
+        <li class="flex-card-quarter">
+          <div class="panel-item">
+            <h5><%= link_to category.name, category_path(category) %></h5>
+            <p><%= pluralize(category.articles.count, "articles") %></p>
+            <%= link_to 'Edit', edit_category_path(category), :class => "btn btn-xs btn-primary" %>
+            <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-xs btn-danger" %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+    <% else %>
+      <p>There is no category available now. Please add one!</p>
+    <% end %>
+
+    <%= link_to 'New Category', new_category_path, :class => 'btn btn-primary btn-black' %>
+  </div>
+</div>

@@ -309,6 +309,14 @@ $slick-opacity-not-active: 0.25;
       margin-bottom: 5px;
     }
   }
+
+  @media only screen and (min-width: 768px){
+    right: -22px;
+  }
+
+  @media only screen and (min-width: 1024px){
+    right: unset;
+  }
 }
 
 .user-name:hover{
@@ -626,16 +634,6 @@ $slick-opacity-not-active: 0.25;
     }
   }
 
-  
-
-  .slideshow-text-color-dark{
-    color: #414042;
-  }
-
-  .slideshow-text-color-white{
-    color: #fff;
-  }
-
   @media only screen and (min-width: 768px){
     .slideshow-image {
       height: 42vw;
@@ -645,6 +643,36 @@ $slick-opacity-not-active: 0.25;
       position: absolute;
       right: 100px;
       top: 20%;
+    }
+
+    .slideshow-text-left {
+      position: absolute;
+      left: 100px;
+      top: 20%;
+    }
+
+    .slideshow-text-dark{
+      color: #414042;
+
+      hr {
+        border-bottom: 1px solid #414042;
+      }
+
+      a {
+        color: #414042;
+      }
+    }
+
+    .slideshow-text-white{
+      color: #fff;
+
+      hr {
+        border-bottom: 1px solid #fff;
+      }
+
+      a {
+        color: #fff;
+      }
     }
   }
 }
@@ -1158,6 +1186,74 @@ $slick-opacity-not-active: 0.25;
 /*================Dropdown Menu Account=============*/
 
 
+/*==================================================*/
+
+/*================Input Form Cust==================*/
+.field-label-cust {
+  padding: 10px;
+  margin: 5px 0;
+  text-align: right;
+}
+
+.text-field-cust {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+/*=================================================*/
+
+/*====================Category=================*/
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.flex-card-quarter {
+  width: 100%;
+  padding: 15px 0;
+
+  @media only screen and (min-width: 768px){
+    width: 50%;
+    padding: 15px;
+  }
+
+  @media only screen and (min-width: 1024px){
+    width: 25%;
+  }
+}
+
+.list-no-style {
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.panel-item {
+  background-color: #f1f1f1;
+  padding: 15px;
+  color: #414042;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  h5 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+/*=============================================*/
 
 
 

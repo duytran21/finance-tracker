@@ -1,18 +1,21 @@
-<h1 align="center">Welcome to <%=@user.full_name %>'s page</h1>
+<div class="page-small panel-default">
+	<div class="panel-heading"> 
+		<h4 align="center">Welcome to <%=@user.full_name %>'s page</h1>
+	</div>
+	<div class="panel-body">
+		<dl class='dl-horizontal'>
+			<dt><strong>Full Name:</strong></dt>
+			<dd><%= @user.full_name %></dd>
+			<dt><strong>Email:</strong></dt>
+			<dd><%= @user.email %></dd>
+		</dl>
 
-<h2>User Details</h2>
-<dl class='dl-horizontal'>
-	<dt><strong>Full Name</strong></dt>
-	<dd><%= @user.full_name %></dd>
-	<dt><strong>Email</strong></dt>
-	<dd><%= @user.email %></dd>
+		<% if @user.stocks.size > 0 %>
+			<%= render 'stocks/list' %>
+		<% else %>
+			<p class="lead">This user is not tracking any stocks</p>
+		<% end %>
 
-</dl>
-
-<% if @user.stocks.size > 0 %>
-	<%= render 'stocks/list' %>
-<% else %>
-	<p class="lead">This user is not tracking any stocks</p>
-<% end %>
-
-<%= link_to "Back", my_friends_path, class: "btn btn-primary" %>
+		<%= link_to "Back", my_friends_path, class: "btn btn-black btn-primary" %>
+	</div>
+</div>

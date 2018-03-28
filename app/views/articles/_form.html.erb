@@ -27,6 +27,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :category %>
+    <%= f.collection_select(:category_id, Category.all, :id, :name) %> 
+  </div>
+
+  <div class="field">
     <%= f.label :isVisible %>
     <%= f.check_box :isVisible, class: "field-box-cust" %>
   </div>
