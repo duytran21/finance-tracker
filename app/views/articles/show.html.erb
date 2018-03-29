@@ -1,3 +1,11 @@
+<% content_for :head do %>
+  <!-- Open FB Graph tags -->
+  <meta property="og:title" content="<%= @article.title %>">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="<%= article_url(@article) %>">
+  <meta property="og:description" content="<%= @article.description %>">
+  <!--<meta property="og:image" content="<%= image_path(@article.img_url) %>">-->
+<% end %>
 <%= render 'article_header' %>
 <div class="arts-main-container">
   <div class="art-banner" style="background-image: url(<%= image_path(@article.img_url) %>)">
@@ -34,8 +42,26 @@
           </div>
         </div>
       </div>
-    </div>
 
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '370871753405816',
+            xfbml      : true,
+            version    : 'v2.5'
+          });
+        };
+
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+    </div>
     <div class="art-right-content" id="art-element-content">
       <% if current_user %>
         <% if current_user == @article.user or current_user.isAdmin? %>
@@ -50,3 +76,12 @@
     </div>
   </div>
 </div>
+
+<script>
+    $(".share-popin").click(function() {
+        FB.ui({
+            method: 'share',
+            href: '<%= article_path(@article) %>',
+}, function(response){});
+    })
+</script>
