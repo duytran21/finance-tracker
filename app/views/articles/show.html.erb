@@ -28,7 +28,7 @@
         </div>
         <div class="share-social">
           <div class="facebook-share share-square ">
-            <a class="share-popin" href="" target="_blank">
+            <a class="share-popin" href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %>" target="_blank">
               <span class="fa fa-facebook icon-social"></span>
               <span class="share-count">0</span>
             </a>
@@ -42,25 +42,6 @@
           </div>
         </div>
       </div>
-
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '370871753405816',
-            xfbml      : true,
-            version    : 'v2.5'
-          });
-        };
-
-        (function(d, s, id){
-           var js, fjs = d.getElementsByTagName(s)[0];
-           if (d.getElementById(id)) {return;}
-           js = d.createElement(s); js.id = id;
-           js.src = "//connect.facebook.net/en_US/sdk.js";
-           fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-jssdk'));
-      </script>
-
     </div>
     <div class="art-right-content" id="art-element-content">
       <% if current_user %>
@@ -76,12 +57,3 @@
     </div>
   </div>
 </div>
-
-<script>
-    $(".share-popin").click(function() {
-        FB.ui({
-            method: 'share',
-            href: '<%= request.original_url %>',
-}, function(response){});
-    })
-</script>
