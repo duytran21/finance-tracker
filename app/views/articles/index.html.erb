@@ -23,14 +23,14 @@
         <td><%= article.isVisible %></td>
         <td><%= article.tags %></td>
         <td><%= article.img_url %></td>
-        <td><%= link_to 'Show', user_article_path(current_user, article) %></td>
-        <td><%= link_to 'Edit', edit_user_article_path(current_user, article) %></td>
-        <td><%= link_to 'Destroy', user_article_path(current_user, article), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', article_path(article) %></td>
+        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%= link_to 'Destroy', article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to 'New Article', new_user_article_path, class: "btn btn-primary btn-black" %>
+<%= link_to 'New Article', new_user_article_path(current_user), class: "btn btn-primary btn-black" %>
 </div>
 </div>

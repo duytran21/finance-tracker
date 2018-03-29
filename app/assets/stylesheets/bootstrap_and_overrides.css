@@ -23,3 +23,25 @@ a:hover, a:focus {
 .navbar-default .navbar-brand:hover , .navbar-default .navbar-brand:focus {
 	color: #ccc;
 }
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+	background-color: #000;
+}
+
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+	border-color: unset;
+}
+
+@media only screen and (max-width: 767px){
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+		color: #fff;
+	}
+
+	.navbar-nav .open .dropdown-menu>li>a {
+		padding-left: 45px;
+	}
+
+	.navbar-nav .open .dropdown-menu {
+		border-bottom: 1px solid #fff;
+	}
+}

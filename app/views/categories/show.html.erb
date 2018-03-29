@@ -4,9 +4,25 @@
 		<h4><%= @category.name %></h4>
 	</div>
 	<div class="panel-body">
-		
-
-	<%= link_to 'Edit', edit_category_path(@category) %> |
+		<% if @category_articles.count > 0 %>
+			<ul class="flex-container list-no-style">
+			<% @category_articles.each do |article| %>
+				<li class="flex-card-quarter">
+				  <div class="panel-item">
+				    <h5><%= link_to article.title %></h5>
+				    <p><%= article.description %></p>
+				    <%#= link_to 'Edit', edit_category_path(category), :class => "btn btn-xs btn-primary" %>
+				    <%#= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-xs btn-danger" %>
+				  </div>
+				</li>
+			<% end %>
+			</ul>
+		<% else %>
+			<p>There is no category available now. Please add one!</p>
+		<% end %>
+	<%# if current_user.isAdmin? %>
+		<%= link_to 'Edit', edit_category_path(@category), :class => 'btn btn-primary btn-black' %>
+	<%# end %>
 	<%= link_to 'Back', categories_path, :class => "btn-devise" %>
 	</div>
 </div>

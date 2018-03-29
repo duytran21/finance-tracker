@@ -38,7 +38,7 @@
 
     <div class="art-right-content" id="art-element-content">
       <% if current_user == @article.user or current_user.isAdmin? %>
-        <%= link_to 'Edit', edit_user_article_path(current_user, @article), class: "btn-modify btn-abs btn" %>
+        <%= link_to 'Edit', edit_article_path(@article), class: "btn-modify btn-abs btn" %>
       <% end %>
       <%= sanitize @article.content %>
 

@@ -11,8 +11,10 @@
           <div class="panel-item">
             <h5><%= link_to category.name, category_path(category) %></h5>
             <p><%= pluralize(category.articles.count, "articles") %></p>
+            <% if current_user.isAdmin? %> 
             <%= link_to 'Edit', edit_category_path(category), :class => "btn btn-xs btn-primary" %>
             <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-xs btn-danger" %>
+            <% end %>
           </div>
         </li>
       <% end %>

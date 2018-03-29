@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-
+  before_action :require_admin, except: [:show, :index]
   # GET /categories
   # GET /categories.json
   def index
@@ -71,5 +71,12 @@ class CategoriesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
       params.require(:category).permit(:name)
+    end
+
+    def require_admin
+      if !current_user.isAdmin?
+        flash[:danger] = "This action is required Admin role!"
+        redirect_to categories_path
+      end
     end
 end

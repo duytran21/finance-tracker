@@ -450,12 +450,21 @@ $slick-opacity-not-active: 0.25;
 .modal-container {
   width: 60%;
   position: fixed;
+
+  @media only screen and (max-width: 991px){
+    width: 90%;
+  }
 }
 
 .modal-content {
   background-color: #fefefe;
   border: 1px solid #888;
   border-radius: 0;
+
+  @media only screen and (max-width: 991px){
+    height: 400px;
+    overflow-y: scroll;
+  }
   
 }
 
@@ -476,7 +485,6 @@ $slick-opacity-not-active: 0.25;
 
 .modal-opened {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
