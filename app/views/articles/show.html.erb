@@ -2,7 +2,7 @@
   <!-- Open FB Graph tags -->
   <meta property="og:title" content="<%= @article.title %>">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="<%= article_url(@article) %>">
+  <meta property="og:url" content="<%= request.original_url %>">
   <meta property="og:description" content="<%= @article.description %>">
   <!--<meta property="og:image" content="<%= image_path(@article.img_url) %>">-->
 <% end %>
@@ -81,7 +81,7 @@
     $(".share-popin").click(function() {
         FB.ui({
             method: 'share',
-            href: '<%= article_path(@article) %>',
+            href: '<%= request.original_url %>',
 }, function(response){});
     })
 </script>
