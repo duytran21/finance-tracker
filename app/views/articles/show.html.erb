@@ -4,7 +4,7 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="<%= request.original_url %>">
   <meta property="og:description" content="<%= @article.description %>">
-  <!--<meta property="og:image" content="<%= image_path(@article.img_url) %>">-->
+  <meta property="og:image" content="<%= image_url(@article.img_url) %>">
 <% end %>
 <%= render 'article_header' %>
 <div class="arts-main-container">
@@ -42,6 +42,9 @@
           </div>
         </div>
       </div>
+
+      <div class="fb-share-button" data-href="<%= request.original_url %>" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= request.original_url %>&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
     </div>
     <div class="art-right-content" id="art-element-content">
       <% if current_user %>
