@@ -9,7 +9,8 @@
 			<% @category_articles.each do |article| %>
 				<li class="flex-card-quarter">
 				  <div class="panel-item">
-				    <h5><%= link_to article.title %></h5>
+				    <h5><%= link_to article.title, article_url(article) %></h5>
+				    <%= image_tag(article.img_url, :class => 'thumbnail_img') %>
 				    <p><%= article.description %></p>
 				    <%#= link_to 'Edit', edit_category_path(category), :class => "btn btn-xs btn-primary" %>
 				    <%#= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-xs btn-danger" %>
@@ -19,6 +20,7 @@
 			</ul>
 		<% else %>
 			<p>There is no category available now. Please add one!</p>
+			<%= link_to 'Add New Article', new_user_article_path(current_user), :class=> 'btn btn-small btn-grey' %>
 		<% end %>
 	<%# if current_user.isAdmin? %>
 		<%= link_to 'Edit', edit_category_path(@category), :class => 'btn btn-primary btn-black' %>
