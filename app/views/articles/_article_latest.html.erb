@@ -1,10 +1,10 @@
 <div class="arts-latest-container">
   <div class="arts-latest-left">
-  	<div class="arts-latest-item" style="background-image: url(<%= image_path('blogs/Circuit_Article.jpg') %>)"> 
+  	<div class="arts-latest-item" style="background-image: url(<%= image_path("#{@articles_five_latest[0].img_url}") %>)"> 
 	    
 	    <div class="arts-latest-desc">
-	    	<%= link_to "#" do %>
-	    		<p>Description go here</p>
+	    	<%= link_to article_path(@articles_five_latest[0]) do %>
+	    		<p><%= @articles_five_latest[0].title %></p>
 	    	<% end %>
 	    </div>
 	</div>
@@ -12,42 +12,42 @@
 
   <div class="arts-latest-right">
   	<div class="arts-latest-small arts-top-right">
-		<div class="arts-latest-item" style="background-image: url(<%= image_path('blogs/Watch_Repair_Article.jpg') %>)" > 
+		<div class="arts-latest-item" style="background-image: url(<%= image_path("#{@articles_five_latest[1].img_url}") %>)" > 
 		    
 		    <div class="arts-latest-desc">
-		    	<%= link_to "#" do %>
-		    		<p>Description go here</p>
-		    	<% end %>
+		    	<%= link_to article_path(@articles_five_latest[1]) do %>
+	    			<p><%= @articles_five_latest[1].title %></p>
+	    		<% end %>
 		    </div>
 		</div>
   	</div>
   	<div class="arts-latest-small arts-top-right">
-  		<div class="arts-latest-item" style="background-image: url(<%= image_path('blogs/iPhone_Article.jpg') %>)"> 
+  		<div class="arts-latest-item" style="background-image: url(<%= image_path("#{@articles_five_latest[2].img_url}") %>)"> 
 		    
 		    <div class="arts-latest-desc">
-		    	<%= link_to "#" do %>
-		    		<p>Description go here</p>
-		    	<% end %>
+		    	<%= link_to article_path(@articles_five_latest[2]) do %>
+	    			<p><%= @articles_five_latest[2].title %></p>
+	    		<% end %>
 		    </div>
 		</div>
   	</div>
   	<div class="arts-latest-small">
-  		<div class="arts-latest-item" style="background-image: url(<%= image_path('blogs/Video_Chip_Article.jpg') %>)"> 
+  		<div class="arts-latest-item" style="background-image: url(<%= image_path("#{@articles_five_latest[3].img_url}") %>)"> 
 		    
 		    <div class="arts-latest-desc">
-		    	<%= link_to "#" do %>
-		    		<p>Description go here</p>
-		    	<% end %>
+		    	<%= link_to article_path(@articles_five_latest[3]) do %>
+	    			<p><%= @articles_five_latest[3].title %></p>
+	    		<% end %>
 		    </div>
 		</div>
   	</div>
   	<div class="arts-latest-small">
-  		<div class="arts-latest-item" style="background-image: url(<%= image_path('blogs/iMac_Article.jpg') %>)"> 
+  		<div class="arts-latest-item" style="background-image: url(<%= image_path("#{@articles_five_latest[4].img_url}") %>)"> 
 		    
 		    <div class="arts-latest-desc">
-		    	<%= link_to "#" do %>
-		    		<p>Description go here</p>
-		    	<% end %>
+		    	<%= link_to article_path(@articles_five_latest[4]) do %>
+	    			<p><%= @articles_five_latest[4].title %></p>
+	    		<% end %>
 		    </div>
 		</div>
   	</div>	  		
@@ -55,28 +55,18 @@
 </div>
 
 <div class="arts-latest-container-mb">
+	<% @articles_five_latest.each do |article| %>
 	<div class="arts-item">
       <%= link_to "#" , class: "arts-item-img" do %>
-        <%= image_tag('blogs/Circuit_Article.jpg', alt: "Article-1") %>
+        <%= image_tag("#{article.img_url}", alt: "article.title") %>
         
       <% end %>
       <div class="arts-item-content">
-        <%= link_to "#" do %>
-          <h3>Title1 here</h3>
-          <p>Content go here</p>
+        <%= link_to article_path(article) do %>
+          <h3><%= article.title %></h3>
+          <p><%= article.description %></p>
         <% end %>
       </div>
     </div>
-    <div class="arts-item">
-      <%= link_to "#" , class: "arts-item-img" do %>
-        <%= image_tag('blogs/Watch_Repair_Article.jpg', alt: "Article-1") %>
-        
-      <% end %>
-      <div class="arts-item-content">
-        <%= link_to "#" do %>
-          <h3>Title1 here</h3>
-          <p>Content go here</p>
-        <% end %>
-      </div>
-    </div>
+    <% end %>
 </div>

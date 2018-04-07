@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   get 'blogs', to: "articles#blogs"
 
+  get 'myposts', to: "articles#myposts"
+
   #resources :users do
   #  resources :articles
   #end

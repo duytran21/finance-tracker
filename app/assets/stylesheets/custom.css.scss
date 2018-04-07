@@ -1273,6 +1273,20 @@ $slick-opacity-not-active: 0.25;
   }
 }
 /*=============================================*/
+.about-avatar-sml{
+  width: 48px;
+  border-radius: 100%;
+  display: inline-block !important;
+}
 
+.underline-link {
+  color: #fff;
+  text-decoration: underline;
 
+  &:hover, &:focus {
+    font-weight: 700;
+    text-decoration: underline;
+
+  }
+}
 

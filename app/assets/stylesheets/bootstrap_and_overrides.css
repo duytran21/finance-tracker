@@ -20,6 +20,10 @@ a:hover, a:focus {
 	color: #fff;
 }
 
+.navbar-brand {
+	padding: 2px;
+}
+
 .navbar-default .navbar-brand:hover , .navbar-default .navbar-brand:focus {
 	color: #ccc;
 }

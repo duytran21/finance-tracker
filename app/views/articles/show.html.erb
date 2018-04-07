@@ -49,7 +49,10 @@
     <div class="art-right-content" id="art-element-content">
       <% if current_user %>
         <% if current_user == @article.user or current_user.isAdmin? %>
-          <%= link_to 'Edit', edit_article_path(@article), class: "btn-modify btn-abs btn" %>
+          <div>
+          <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-md btn-primary" %>
+          <%= link_to 'Destroy', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-md btn-danger" %>
+         </div>
         <% end %>
       <% end %>
       <%= sanitize @article.content %>

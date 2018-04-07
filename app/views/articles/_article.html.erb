@@ -1,17 +1,21 @@
 <div class="arts-list-container">
   <div class="arts-list-masonry" id="grid_container">
+    <% @articles_rest.each do |article| %>
     <div class="arts-item">
-      <%= link_to "#" , class: "arts-item-img" do %>
-        <%= image_tag('blogs/Circuit_Article.jpg', alt: "Article-1") %>
+      <%= link_to article_path(article), class: "arts-item-img" do %>
+        <%= image_tag("#{article.img_url}", alt: "#{article.title}") %>
         
       <% end %>
       <div class="arts-item-content">
-        <%= link_to "#" do %>
-          <h3>Title1 here</h3>
-          <p>Content go here</p>
+        <%= link_to article_path(article) do %>
+          <h3><%= article.title %></h3>
+          <p><%= article.description %></p>
         <% end %>
       </div>
     </div>
+    <% end %>
+
+    <% if false %>
     <div class="arts-item">
       <%= link_to "#" , class: "arts-item-img" do %>
         <%= image_tag('blogs/Video_Chip_Article.jpg', alt: "Article-2") %>
@@ -72,6 +76,7 @@
         <% end %>
       </div>
     </div>
+    <% end %>
   </div>
 </div>
 
