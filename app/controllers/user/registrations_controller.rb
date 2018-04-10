@@ -2,6 +2,7 @@ class User::RegistrationsController < Devise::RegistrationsController
 	before_action :configure_permitted_parameters if :devise_controller?
 
 	def create
+		#debugger
 		build_resource(sign_up_params)
 
 		resource.save

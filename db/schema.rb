@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 20180322230305) do
     t.string   "first_name"
     t.string   "last_name"
     t.boolean  "approved",               default: false, null: false
-    t.integer  "role_id"
+    t.integer  "role_id",                                null: false
     t.index ["approved"], name: "index_users_on_approved"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
