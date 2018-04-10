@@ -11,26 +11,26 @@
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { role: 'form', id: 'form-sign-up' } ) do |f| %>
           <div class="form-group form-group-cust">
             <%= f.label :email %>
-            <%= f.email_field :email, autofocus: true, id: 'user_email_sign_up', class: 'form-control form-control-cust' %>
+            <%= f.email_field :email, autofocus: true, id: 'user_email_sign_up1', class: 'form-control form-control-cust' %>
           </div>
           <div class="form-group form-group-cust">
             <div class="col-md-6 no-padding">
               <%= f.label :first_name %>
-              <%= f.text_field :first_name, class: 'form-control form-control-cust' %>
+              <%= f.text_field :first_name, id: 'user_first_name_sign_up1', class: 'form-control form-control-cust' %>
             </div>
             <div class="col-md-6 no-padding left-padding">
               <%= f.label :last_name %>
-              <%= f.text_field :last_name, class: 'form-control form-control-cust' %>
+              <%= f.text_field :last_name, id: 'user_last_name_sign_up1', class: 'form-control form-control-cust' %>
             </div>
           </div>
           
           <div class="form-group form-group-cust">
             <%= f.label :password %>
-            <%= f.password_field :password, id: 'user_password_sign_up', class: 'form-control form-control-cust' %>
+            <%= f.password_field :password, id: 'user_password_sign_up1', class: 'form-control form-control-cust' %>
           </div>
           <div class="form-group form-group-cust">
             <%= f.label :password_confirmation %>
-            <%= f.password_field :password_confirmation, class: 'form-control form-control-cust' %>
+            <%= f.password_field :password_confirmation, id: 'user_password_confirmation_sign_up1', class: 'form-control form-control-cust' %>
           </div>
           <p>By creating an account you agree to our <strong><%= link_to "Term & Privacy" %></strong></p>
           <%= f.submit t('.sign_up', default: 'Sign up'), class: 'btn btn-primary btn-black' %>

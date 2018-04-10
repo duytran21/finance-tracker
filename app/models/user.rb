@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :articles
 
   belongs_to :role
-  before_create :set_default_role
+  before_validation :set_default_role
 
   def active_for_authentication?
     super && approved?
@@ -92,6 +92,7 @@ class User < ApplicationRecord
   private
   def set_default_role
     self.role ||= Role.find_by_name('registered')
+    #self.role = Role.find(1)
   end
 
 end
