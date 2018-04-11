@@ -1,1 +1,1 @@
-!function(){"use strict";var t=function(t){t.addCommand("mcePrint",function(){t.getWin().print()})},n=function(t){t.addButton("print",{title:"Print",cmd:"mcePrint"}),t.addMenuItem("print",{text:"Print",cmd:"mcePrint",icon:"print"})};tinymce.util.Tools.resolve("tinymce.PluginManager").add("print",function(i){t(i),n(i),i.addShortcut("Meta+P","","mcePrint")})}();
+plugin-1ba88c314fa4c0c47ab0af0aa908c03d7906a77fef6a319a302ffff44099fe26.js

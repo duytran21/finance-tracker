@@ -1,4 +1,1 @@
-window.tinymce = window.tinymce || {
-  base:   '/assets/tinymce',
-  suffix: ''
-};
+preinit-84328a53e798df12f891eb49871773fd9f925439c8630e9e22423a82ef9e6f89.js

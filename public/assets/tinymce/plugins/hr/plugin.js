@@ -1,1 +1,1 @@
-!function(){"use strict";var n=function(n){n.addCommand("InsertHorizontalRule",function(){n.execCommand("mceInsertContent",!1,"<hr />")})},t=function(n){n.addButton("hr",{icon:"hr",tooltip:"Horizontal line",cmd:"InsertHorizontalRule"}),n.addMenuItem("hr",{icon:"hr",text:"Horizontal line",cmd:"InsertHorizontalRule",context:"insert"})};tinymce.util.Tools.resolve("tinymce.PluginManager").add("hr",function(o){n(o),t(o)})}();
+plugin-7efaeee8fa1f71745d5726205bbb4fd8c0f4eba1edf2baf5a31a3b59bb677622.js
