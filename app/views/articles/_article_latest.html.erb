@@ -57,7 +57,7 @@
 <div class="arts-latest-container-mb">
 	<% @articles_five_latest.each do |article| %>
 	<div class="arts-item">
-      <%= link_to "#" , class: "arts-item-img" do %>
+      <%= link_to article_path(article) , class: "arts-item-img" do %>
         <%= image_tag("#{article.img_url}", alt: "article.title") %>
         
       <% end %>

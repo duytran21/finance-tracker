@@ -650,6 +650,12 @@ $slick-opacity-not-active: 0.25;
     }
     a {
       display: block;
+
+      .nav-arrow.d-right::before{
+        width: 9px;
+        height: 9px;
+        margin-left: 10px;
+      }
     }
   }
 
@@ -887,6 +893,7 @@ $slick-opacity-not-active: 0.25;
 
   img {
     width: 100%;
+    height: 300px;
   }
 
   .blog-slideshow-title {
@@ -895,7 +902,7 @@ $slick-opacity-not-active: 0.25;
     border-bottom: 10px solid #515254;
     position: relative;
     margin: -50px 20px 0;
-    height: 200px;
+    height: 100px;
   }
   @media only screen and (min-width: 480px){
     padding: 0 20px;

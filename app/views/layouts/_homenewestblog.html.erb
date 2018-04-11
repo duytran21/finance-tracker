@@ -4,45 +4,17 @@
 		<hr>
 	</div>
 	<div id="homeblog-slider">
+		<% @hp_articles.each do |article| %>
 		<div class="blog-slideshow">
-			<%= link_to "", class: "blog-slideshow-link" do %>
-				<%= image_tag('blogs/1.jpg', alt: "Blogs-1") %>
+			<%= link_to article_path(article), class: "blog-slideshow-link" do %>
+				<%= image_tag("#{article.img_url}", alt: "#{article.title}") %>
 			
 				<div class=blog-slideshow-title>
-					<h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</h4>
+					<h4><%= article.description %></h4>
 				</div>
 			<% end %>
 		</div>
-
-		<div class="blog-slideshow">
-			<%= link_to "", class: "blog-slideshow-link" do %>
-				<%= image_tag('blogs/2.jpg', alt: "Blogs-2") %>
-			
-				<div class=blog-slideshow-title>
-					<h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</h4>
-				</div>
-			<% end %>
-		</div>
-
-		<div class="blog-slideshow">
-			<%= link_to "", class: "blog-slideshow-link" do %>
-				<%= image_tag('blogs/3.jpg', alt: "Blogs-3") %>
-				
-				<div class=blog-slideshow-title>
-					<h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</h4>
-				</div>
-			<% end %>
-		</div>
-
-		<div class="blog-slideshow">
-			<%= link_to "", class: "blog-slideshow-link" do %>
-				<%= image_tag('blogs/1.jpg', alt: "Blogs-4") %>
-			
-				<div class=blog-slideshow-title>
-					<h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</h4>
-				</div>
-			<% end %>
-		</div>
+		<% end %>
 	</div>
 </div>
 
